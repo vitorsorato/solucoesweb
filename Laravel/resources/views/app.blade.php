@@ -11,7 +11,7 @@
   <body>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ route('clients.index') }}">CRUD</a>
+            <a class="navbar-brand" href="{{ route('orcamento.index') }}">Realengo</a>
         </div>
     </nav>
 
