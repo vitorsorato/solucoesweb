@@ -3,40 +3,38 @@
 @section('titulo', 'Novo Cliente')
 
 @section('conteudo')
-    <h1>Novo Cliente</h1>
-    @if ($errors->any())
-        <div class="alert alert-danger mx-auto">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    <form action="{{ route('clients.store') }}" method="POST">
-        @csrf
-        <div class="mb-3">
-            <label for="name" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="name" name="name" placeholder="Digite o nome" value="{{old('name')}}">
-        </div>
-        <div class="mb-3">
-            <label for="age" class="form-label">Idade</label>
-            <input type="number" class="form-control" id="age" name="age" placeholder="Digite a idade" value="{{old('age')}}">
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="text" class="form-control" id="email" name="email" placeholder="Digite o email" value="{{old('email')}}">
-        </div>
-        <div class="mb-3">
-            <label for="pessoasexo" class="form-label">Sexo</label>
-            <div  >
-                <select name="pessoasexo" id="pessoasexo" class="form-control">
-                    <option value=""> </option>
+    <div>
+     <table class="table table-bordered table-hover">
+      <thead>
+      <caption className="caption">Centro de Custo: Produção</caption>
+      <tr className="trs">
+        <th class="col-md-4">Conta Contábil</th>
+        <th class="col-md-4">Valor </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr className="trs">
+        <td>Materia Prima</td>
+        <td><input className="inputs" type="text" step='0.01' class="form-control" required="required" placeholder='0.00' inputMode='decimal' pattern='\d*' /></td>
+      </tr>
+      <tr className="trs">
+        <td>Despesas de Conservação</td>
+        <td><input className="inputs" type="text" step='0.01' class="form-control" required="required" placeholder='0.00' inputMode='decimal' pattern='\d*' /></td>
+      </tr>
+      <tr className="trs">
+        <td>Despesas com Veíulos</td>
+        <td><input className="inputs" type="text" step='0.01' class="form-control" required="required" placeholder='0.00' inputMode='decimal' pattern='\d*' /></td>
+      </tr>
+      <tr className="trs">
+        <td>Despesas com taxas</td>
+        <td><input className="inputs" type="text" step='0.01' class="form-control" required="required" placeholder='0.00' inputMode='decimal' pattern='\d*' /></td>
+      </tr>
+        
 
-                </select>
-            </div>
-        </div>
-
-        <button class="btn btn-success" type="submit">Enviar</button>
-    </form>
+      </tbody>
+      </table>
+      <button type="submit" className="btn btn-primary">
+        Cadastrar Orçamento
+      </button>
+    </div>
 @endsection

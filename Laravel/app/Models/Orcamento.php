@@ -9,6 +9,14 @@ class Orcamento extends Model
 {
     use HasFactory;
     
+    const PRODUCAO = 1;
+    const ADMINISTRATIVO = 1;
+    const TRANSPORTE = 1;
+    const ARMAZEM = 1;
+    public static $listCentroDeCustos = [
+        self::PRODUCAO => PRODUCAO;
+    ]
+
     protected $fillable  = ['descricao_orcamento', 'valores_orcamento', 'data_criacao', 'data_alteracao'];
     public $timestamps = false;
 

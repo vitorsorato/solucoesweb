@@ -11,7 +11,7 @@
         </div>
     @endif
 
-    <a class="btn btn-success">Relatorios</a>
+    <a class="btn btn-success" href="{{ route('orcamento.createRelatorios') }}">Relatorios</a>
     <a class="btn btn-success" href="{{ route('orcamento.create') }}">Novo Orçamento</a>
     
     <table class="table">

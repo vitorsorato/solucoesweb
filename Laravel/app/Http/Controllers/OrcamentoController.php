@@ -22,6 +22,11 @@ class OrcamentoController extends Controller
         return view('orcamento.create');
     }
 
+    public function createRelatorio()
+    {
+        return view('orcamento.createRelatorio');
+    }
+
     public function store(Request $request)
     {
         //

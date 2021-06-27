@@ -12,7 +12,7 @@ Route::get('/', [HomeController::class, 'indexClient'])->name('orcamento.index-c
 
 Route::get('/orcamentos', [OrcamentoController::class, 'index'])->name('orcamento.index');
 Route::get('/orcamentos/criar', [OrcamentoController::class, 'create'])->name('orcamento.create');
-
+Route::get('/orcamentos/relatorios', [OrcamentoController::class, 'createRelatorio'])->name('orcamento.createRelatorios');
 
 
 
