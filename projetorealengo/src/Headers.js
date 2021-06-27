@@ -2,31 +2,24 @@ import React from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap';
 import './Headers.css';
 
-const Example = (props) => {
+const Headers = (props) => {
   return (
     <div className="example">
-      <p>Realengo test</p>
-      <Nav vertical>
+      <Nav vertical className="nav-principal">
         <NavItem>
-          <NavLink href="#">Link</NavLink>
+        <h4>Realengo Alimentos</h4>
+        <br></br>
         </NavItem>
-        <NavItem>
-          <NavLink href="#">Link</NavLink>
+        <NavItem >
+          <NavLink href="#">Orçamentos</NavLink>
         </NavItem>
-        <NavItem>
-          <NavLink href="#">Another Link</NavLink>
+        <NavItem >
+          <NavLink href="#">Novo Orçamento</NavLink>
         </NavItem>
-        <NavItem>
-          <NavLink disabled href="#">Disabled Link</NavLink>
-        </NavItem>
-      </Nav>
-      <hr />
-      <p>Link based</p>
-      <Nav vertical>
-        <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink> <NavLink href="#">Another Link</NavLink> <NavLink disabled href="#">Disabled Link</NavLink>
       </Nav>
     </div>
+
   );
 }
 
-export default Example;
+export default Headers;
