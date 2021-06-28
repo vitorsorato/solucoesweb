@@ -1,48 +1,83 @@
-@extends('app')
-
-@section('titulo', 'Editar Cliente')
-
-@section('conteudo')
-    <h1>Editar Cliente</h1>
-    @if ($errors->any())
-        <div class="alert alert-danger mx-auto">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    <form action="{{ route('clients.update', $client) }}" method="POST">
-        @csrf
-        @method('PUT')
-        <div class="mb-3">
-            <label for="name" class="form-label">Nome</label>
-            <input type="text" value="{{ $client->name }}" class="form-control" id="name" name="name"
-                placeholder="Digite o nome">
-        </div>
-        <div class="mb-3">
-            <label for="idade" class="form-label">idade</label>
-            <input type="number" value="{{ $client->age }}" class="form-control" id="age" name="age"
-                placeholder="Digite a idade">
-        </div>
-        <div class="mb-3">
-            <label for="endereco" class="form-label">email</label>
-            <input type="text" value="{{ $client->email }}" class="form-control" id="email" name="email"
-                placeholder="Digite o email">
-        </div>
-        <div class="mb-3">
-            <label for="pessoasexo" class="form-label">sexo</label>
-            <div>
-                <select name="pessoasexo" id="pessoasexo" class="form-control">
-                    <option value=""> </option>
-                    @foreach ($listPessoaSexo as $idPessoaSexo => $pessoaSexo)
-                        <option value="{{ $idPessoaSexo }}" @if ($idPessoaSexo == $client->pessoasexo) selected @endif>
-                            {{ $pessoaSexo }} </option>
+@extends('layouts.app')
+@section('content')
+    <div class="container">
+        @if ($errors->any())
+            <div class="alert alert-danger mx-auto">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
                     @endforeach
-                </select>
+                </ul>
             </div>
-        </div>
-        <button class="btn btn-success" type="submit">Enviar</button>
-    </form>
+        @endif
+
+        <form action="{{ route('orcamento.update', $orcamento) }}" method="POST">
+            @csrf
+            @method('PUT')
+            <div>
+                <div class="row">
+                    <div class="col-8">
+                        <label for="centrocusto" class="form-label">Centro de Custo</label>
+                        <div>
+                            <select name="centrocusto" id="centrocusto" class="form-control">
+                                <option value=""> </option>
+                                @foreach ($listCentroCusto as $idCentroCusto => $centroCusto)
+                                    <option value="{{ $idCentroCusto }}" @if ($idCentroCusto == $orcamento->centrocusto) selected @endif>
+                                        {{ $centroCusto }}
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <label for="dataperiodo" class="form-label">Data</label>
+                        <div>
+                            <select name="dataperiodo" id="dataperiodo" class="form-control">
+                                <option value=""> </option>
+                                @foreach ($listDataPeriodo as $idDataPeriodo => $dataPeriodo)
+                                    <option value="{{ $idDataPeriodo }}" @if ($idDataPeriodo == $orcamento->dataperiodo) selected @endif>
+                                        {{ $dataPeriodo }}
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <table class="table table-bordered table-hover p-5">
+                    <thead>
+                        <tr>
+                            <th class="col-md-4">Conta Contábil</th>
+                            <th class="col-md-4">Valor </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Materia Prima</td>
+                            <td><input name="materiaprima" id="materiaprima" value={{ $orcamento->materiaprima }}
+                                    type="text" class="form-control" placeholder='0.00' pattern='\d*' /></td>
+                        </tr>
+                        <tr>
+                            <td>Despesas de Conservação</td>
+                            <td><input name="despesaconservacao" id="despesaconservacao"
+                                    value={{ $orcamento->despesaconservacao }} type="text" step='0.01'
+                                    class="form-control" required="required" placeholder='0.00' pattern='\d*' /></td>
+                        </tr>
+                        <tr>
+                            <td>Despesas com Veíulos</td>
+                            <td><input name="despesasveiculos" id="despesasveiculos"
+                                    value={{ $orcamento->despesasveiculos }} type="text" step='0.01' class="form-control"
+                                    required="required" placeholder='0.00' pattern='\d*' /></td>
+                        </tr>
+                        <tr>
+                            <td>Despesas com taxas</td>
+                            <td><input name="despesastaxas" id="despesastaxas" value={{ $orcamento->despesastaxas }}
+                                    type="text" step='0.01' class="form-control" required="required" placeholder='0.00'
+                                    pattern='\d*' /></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button class="btn btn-success" type="submit">Enviar</button>
+            </div>
+        </form>
+    </div>
 @endsection

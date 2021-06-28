@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Realengo') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -39,7 +39,7 @@
             margin-top: 40px;
             background-color: whitesmoke;
             height: 150px;
-            border-radius: 5px;
+            border-radius: 8px;
             align-items: center;
             padding-top: 50px;
             padding-left: 5px;
@@ -57,7 +57,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/orcamentos') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    Realengo
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
