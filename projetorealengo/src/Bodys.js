@@ -6,11 +6,9 @@ const Bodys = (props) => {
   return (
     <div >
     <div >
-        <h1>Lista de Orçamentos</h1>
+        <h1 className="card-header">Lista de Orçamentos</h1>
     </div>
 
-    <a className="btn btn-success" href="">Relatorios</a>
-    <a className="btn btn-success" href="">Novo Orçamento</a>
 
     <table className="table" >
         <thead>
