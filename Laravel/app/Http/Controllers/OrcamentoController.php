@@ -107,7 +107,16 @@ class OrcamentoController extends Controller
 
         $orcamento->delete();
 
-        $request->session()->flash("mensagem", $orcamento->centrocusto . "  removido com sucesso!");
+        $listCentroCusto = Orcamento::$listCentroCusto;
+        $nomeCentroCusto = '';
+
+        foreach ($listCentroCusto as $idCentroCusto => $centroCusto) {
+            if ($orcamento->centrocusto == $idCentroCusto) {
+                $nomeCentroCusto = $centroCusto;
+            }
+        }
+
+        $request->session()->flash("mensagem", $nomeCentroCusto . "  removido com sucesso!");
 
         return redirect('/orcamentos');
     }
