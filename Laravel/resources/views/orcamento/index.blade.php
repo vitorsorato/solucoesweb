@@ -1,8 +1,17 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    <div class="jumbotron">
-        <h1>Lista de Orçamentos</h1>
+    <div class="container" 
+        style="height:60px; 
+            background-color:white;
+            border-radius:15px;
+            max-width:640px;
+            margin-bottom:3%">
+        <h3 style="text-align:center;
+                color:black;
+                margin:auto;
+                width:50%;
+                padding: 10px;" >Lista de Orçamentos</h3>
     </div>
     <!-- EXIBI MENSAGENS -->
     @if (isset($mensagem))
@@ -11,12 +20,12 @@
         </div>
     @endif
 
-    <a class="btn btn-success" href="{{ route('orcamento.createRelatorios') }}">Relatorios</a>
+    <a class="btn btn-success" href="{{ route('orcamento.createRelatorios') }}">Relatórios</a>
     <a class="btn btn-success" href="{{ route('orcamento.create') }}">Novo Orçamento</a>
 
     <table class="table" >
         <thead>
-            <tr>
+            <tr style="text-align:center;">
                 <th scope="col">Cód</th>
                 <th scope="col">Centro de Custo</th>
                 <th scope="col">Valor Total</th>
@@ -26,7 +35,7 @@
         </thead>
         <tbody>
             @foreach ($orcamentos as $orcamento)
-                <tr>
+                <tr style="text-align:center;">
                     <th> {{ $orcamento->id }} </th>
                     <td>
                         @foreach ($listCentroCusto as $idCentroCusto => $centroCusto)
