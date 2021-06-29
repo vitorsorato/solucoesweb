@@ -4,40 +4,30 @@ import './Bodys.css';
 
 const Bodys = (props) => {
   return (
-    <div>
-     <table class="table table-bordered table-hover">
-      <thead>
-      <caption className="caption">Centro de Custo: Produção</caption>
-      <tr className="trs">
-        <th class="col-md-4">Conta Contábil</th>
-        <th class="col-md-4">Valor </th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr className="trs">
-        <td>Materia Prima</td>
-        <td><input className="inputs" type="text" step='0.01' class="form-control" required="required" placeholder='0.00' inputMode='decimal' pattern='\d*' /></td>
-      </tr>
-      <tr className="trs">
-        <td>Despesas de Conservação</td>
-        <td><input className="inputs" type="text" step='0.01' class="form-control" required="required" placeholder='0.00' inputMode='decimal' pattern='\d*' /></td>
-      </tr>
-      <tr className="trs">
-        <td>Despesas com Veíulos</td>
-        <td><input className="inputs" type="text" step='0.01' class="form-control" required="required" placeholder='0.00' inputMode='decimal' pattern='\d*' /></td>
-      </tr>
-      <tr className="trs">
-        <td>Despesas com taxas</td>
-        <td><input className="inputs" type="text" step='0.01' class="form-control" required="required" placeholder='0.00' inputMode='decimal' pattern='\d*' /></td>
-      </tr>
-
-
-      </tbody>
-      </table>
-      <button type="submit" className="btn btn-primary">
-        Cadastrar Orçamento
-      </button>
+    <div >
+    <div >
+        <h1>Lista de Orçamentos</h1>
     </div>
+
+    <a className="btn btn-success" href="">Relatorios</a>
+    <a className="btn btn-success" href="">Novo Orçamento</a>
+
+    <table className="table" >
+        <thead>
+            <tr>
+                <th >Cód</th>
+                <th >Centro de Custo</th>
+                <th >Valor Total</th>
+                <th >Data</th>
+                <th >Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+        </tbody>
+    </table>
+</div>
 
   );
 }

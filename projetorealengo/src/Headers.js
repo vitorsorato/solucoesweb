@@ -13,9 +13,6 @@ const Headers = (props) => {
         <NavItem >
           <NavLink href="#">Orçamentos</NavLink>
         </NavItem>
-        <NavItem >
-          <NavLink href="#">Novo Orçamento</NavLink>
-        </NavItem>
       </Nav>
     </div>
 
