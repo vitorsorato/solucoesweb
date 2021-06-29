@@ -9,7 +9,7 @@ class Orcamento extends Migration
 
     public function up()
     {
-        Schema::create('orcamento', function (Blueprint $table) {
+        Schema::create('orcamentos', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
             $table->integer('centrocusto');
