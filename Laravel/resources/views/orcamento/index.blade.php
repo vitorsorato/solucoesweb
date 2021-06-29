@@ -19,7 +19,7 @@
             <tr>
                 <th scope="col">Cód</th>
                 <th scope="col">Centro de Custo</th>
-                <th scope="col">Valor</th>
+                <th scope="col">Valor Total</th>
                 <th scope="col">Data</th>
                 <th scope="col">Ações</th>
             </tr>
