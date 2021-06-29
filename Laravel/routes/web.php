@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Auth;
 Auth::routes();
 
 
-Route::get('/home', [HomeController::class, 'index'])->name('orcamento.index-client');
+Route::get('/', [HomeController::class, 'index'])->name('orcamento.index-client');
 
 Route::get('/orcamentos', [OrcamentoController::class, 'index'])->name('orcamento.index');
 Route::get('/orcamentos/criar', [OrcamentoController::class, 'create'])->name('orcamento.create');
