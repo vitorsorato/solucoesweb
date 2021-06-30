@@ -1,0 +1,69 @@
+html{
+    scroll-behavior: smooth;
+}
+
+nav {
+  background-color: #FFFFFF;
+}
+
+
+
+.carousel-item{
+  height: 100%;
+  width: 100%;
+}
+
+.carousel-caption {
+    top: 20%;
+    bottom: auto;
+    align-items: center;
+    align-content: center;
+    background-color: #091570;
+}
+
+
+.html, .body {height:100%;}
+
+.body {
+  background-color: #efefef
+}
+
+.geral {
+    min-height:100%;
+    position:relative;
+    width:800px;
+}
+
+.carousel-img{
+  height: 100%;
+  width: 100%;
+}
+
+#slide-1{
+  background-image: url('pictures/arrozbanner.jpg');
+  background-size: cover;
+}
+
+#slide-2{
+  background-image: url('pictures/arroz.jpeg');
+  background-size: cover;
+}
+
+#slide-3{
+  background-image: url('pictures/arrozbanner.jpg');
+  background-size: cover;
+}
+
+.carousel {
+  height: 70%;
+}
+
+
+.footer {
+    background-color: #091570;
+}
+
+.content {overflow:hidden;}
+.aside {width:200px;}
+.fleft {float:left;}
+.fright {float:right;}
